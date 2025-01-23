@@ -11,9 +11,9 @@ class TreeNode:
 
 def isSymmetric(root: Optional[TreeNode]) -> bool:
     def dfs(left, right):
-        if not left and not right:
+        if left and right:
             return True
-        if not left or not right:
+        if left or right:
             return False
         return (left.val == right.val and
           dfs(left.right, right.left) and
